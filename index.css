@@ -1,0 +1,200 @@
+header {
+  background: #9D511D;
+}
+
+header nav a img {
+  width: 100px;
+}
+
+header nav div ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+/* Condiciones */
+/* Extend */
+.texto, .texto--verde, .texto--negro, .texto--rojo {
+  width: 300px;
+  margin: 10px;
+  padding: 10px;
+  border-radius: 20px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.texto--verde {
+  background: lightgreen;
+}
+
+.texto--negro {
+  background: black;
+  color: white;
+}
+
+/* Mixin */
+.texto--rojo {
+  color: black;
+  background: lightpink;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+.interno {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.interno .operaciones {
+  background: black;
+  color: white;
+  width: 300px;
+  margin: 20px;
+}
+
+.interno .condiciones {
+  margin: 20px;
+}
+
+.interno .condiciones p {
+  margin: 12px;
+  background: aqua;
+  width: 260px;
+}
+
+.interno .condiciones p {
+  display: block;
+}
+
+.interno .bucles p {
+  margin: 20px;
+  background: green;
+  color: white;
+  padding: 10px;
+}
+
+.interno .each {
+  margin: 20px;
+  width: 200px;
+  background: red;
+  color: aliceblue;
+}
+
+.interno .each p {
+  margin: 10px;
+  padding: 10px;
+}
+
+.interno .maps {
+  margin: 20px;
+  background: pink;
+}
+
+.interno .maps h2 {
+  padding: 10px;
+  background: darkblue;
+  color: white;
+}
+
+.interno .maps p {
+  margin: 10px;
+  color: white;
+  padding: 10px;
+}
+
+.interno .extend {
+  margin: 20px;
+  background: darkgoldenrod;
+}
+
+.interno .extend h2 {
+  background: violet;
+  padding: 10px;
+}
+
+.interno .mixins {
+  margin: 20px;
+  background: yellow;
+}
+
+.interno .mixins h2 {
+  background: lightgreen;
+}
+
+/* Bucles */
+.width-1 {
+  width: 100px;
+}
+
+.width-2 {
+  width: 200px;
+}
+
+.width-3 {
+  width: 300px;
+}
+
+.width-4 {
+  width: 400px;
+}
+
+.width-5 {
+  width: 500px;
+}
+
+.width-6 {
+  width: 600px;
+}
+
+/* Each */
+.bg-red {
+  background-color: red;
+}
+
+.bg-blue {
+  background-color: blue;
+}
+
+.bg-green {
+  background-color: green;
+}
+
+.bg-yellow {
+  background-color: yellow;
+}
+
+.bg-black {
+  background-color: black;
+}
+
+.bg-lightblue {
+  background-color: lightblue;
+}
+
+/* Maps */
+.box-re {
+  background: red;
+}
+
+.box-bl {
+  background: blue;
+}
+
+.box-gre {
+  background: green;
+}
+
+.box-bro {
+  background: brown;
+}
+/*# sourceMappingURL=index.css.map */

@@ -1,0 +1,159 @@
+@import 'header';
+
+
+/* Condiciones */
+$operaciones: 600px;
+$oculto: 260px;
+$aparecer: block;
+$fondos-h2: (
+    vb: violet,
+    lg: lightgreen,
+    db: darkblue
+);
+/* Extend */
+.texto{
+    width: 300px;
+    margin: 10px;
+    padding: 10px;
+    border-radius: 20px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.texto--verde{
+    @extend .texto;
+    background: lightgreen;
+}
+.texto--negro{
+    @extend .texto;
+    background: black;
+    color: white;
+}
+
+/* Mixin */
+@mixin texto ($col, $bg) {
+    @extend .texto;
+    color: $col;
+    background: $bg;
+}
+.texto--rojo {
+    @include texto (black, lightpink)
+}
+
+*{
+    padding: 0;
+    margin: 0;
+}
+
+.interno{
+    display: flex;
+    flex-direction: column;
+    .operaciones{
+        background: black;
+        color: white;
+        width: $operaciones / 2;
+        margin: 20px;
+    }
+    .condiciones{
+        margin: 20px;
+        
+        p{
+            margin: 12px;
+            background: aqua;
+            width: $oculto;
+            
+        }
+        @if $aparecer == block{
+            p{
+                display: block;
+            }
+        }
+        @else if $aparecer != block{
+            p{
+                display: none;
+            }
+        }
+    }
+
+    .bucles{
+        p{
+            margin: 20px;
+            background: green;
+            color: white;
+            padding: 10px;
+        }
+    }
+
+    .each{
+        margin: 20px;
+        width: 200px;
+        background: red;
+        color: aliceblue;
+        p{
+            margin: 10px;
+            padding: 10px;
+        }
+    }
+
+    .maps{
+        margin: 20px;
+        background: pink;
+        h2{
+            padding: 10px;
+            background: map-get($fondos-h2, db);
+            color: white;
+        }
+        p{
+            margin: 10px;
+            color: white;
+            padding: 10px;
+        }
+    }
+
+    .extend{
+        margin: 20px;
+        background: darkgoldenrod;
+        h2{
+            background: map-get($fondos-h2, vb);
+            padding: 10px;
+        }
+        
+    }
+
+    .mixins{
+        margin: 20px;
+        background: yellow;
+        h2{
+            background: map-get($fondos-h2, lg );
+        }
+        
+    }
+    
+
+}
+
+/* Bucles */
+@for $i from 1 through 6 {
+    .width-#{$i} { width: 100px * $i;}
+}
+
+/* Each */
+@each $background in red, blue, green, yellow, black, lightblue {
+    .bg-#{$background} {
+        background-color: $background;
+    }
+}
+
+/* Maps */
+
+$box:(
+    re: red,
+    bl: blue,
+    gre: green,
+    bro: brown
+);
+
+@each $nombre, $valor in $box {
+    .box-#{$nombre} {
+        background: $valor;
+    }
+}
+
