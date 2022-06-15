@@ -46,6 +46,17 @@ $fondos-h2: (
 .interno{
     display: flex;
     flex-direction: column;
+    h1{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: 30px 25%;
+        padding: 10px;
+        width: 50%;
+        color: white;
+        background: linear-gradient(black, grey)
+    }
     .operaciones{
         background: black;
         color: white;

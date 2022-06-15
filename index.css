@@ -55,6 +55,28 @@ header nav div ul {
           flex-direction: column;
 }
 
+.interno h1 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 30px 25%;
+  padding: 10px;
+  width: 50%;
+  color: white;
+  background: -webkit-gradient(linear, left top, left bottom, from(black), to(grey));
+  background: linear-gradient(black, grey);
+}
+
 .interno .operaciones {
   background: black;
   color: white;
