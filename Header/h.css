@@ -1,11 +1,13 @@
 header {
-  background: #9D511D;
+  background: #3a2114;
+  /* Menu desplegable */
 }
 
 header .navegacion-personal {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  height: auto;
 }
 
 header .logo-efe {
@@ -13,7 +15,7 @@ header .logo-efe {
 }
 
 header .logo-efe img {
-  width: 100px;
+  width: 90px;
 }
 
 header .menu-desplegable {
@@ -26,14 +28,13 @@ header .menu-desplegable {
 }
 
 header .menu-personal {
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
 }
 
 header .menu-personal .i-menu {
   margin: 20px;
-  padding: 5px;
   background: white;
   border: solid black 1px;
 }
@@ -43,17 +44,38 @@ header .menu-personal .i-menu .a-menu {
   color: brown;
   font-weight: 800;
   font-size: 20px;
+  height: auto;
 }
 
-header .menu-personal .i-menu .desplegable {
+header .i-menu {
+  margin: 20px;
+  background: white;
+  border: solid black 1px;
+}
+
+header .i-menu .a-menu {
+  font-family: sans-serif;
+  color: brown;
+  font-weight: 800;
+  font-size: 20px;
+  height: 20px;
+}
+
+header .i-menu .desplegable {
   background: #03072E;
 }
 
-header .menu-personal .i-menu .desplegable li {
+header .i-menu .desplegable li {
   border-top: 2px solid grey;
+  list-style: none;
 }
 
-header .menu-personal .i-menu .desplegable .sub-menu {
+header .i-menu .desplegable li a {
+  color: white;
+  text-decoration: none;
+}
+
+header .i-menu .desplegable .sub-menu {
   font-family: sans-serif;
   color: white;
   font-weight: 800;
@@ -63,22 +85,84 @@ header .menu-personal .i-menu .desplegable .sub-menu {
 }
 
 header .lugar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   font-size: 30px;
-  border-left: 2px solid black;
+  border: 2px solid black;
   background-color: #FEFEFE;
-  padding-bottom: 25px;
-  padding-top: 25px;
-  padding-left: 160px;
+  height: 100px;
+  padding-left: 3%;
+  padding-right: 7%;
+  width: auto;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 header .lugar h1 {
-  position: relative;
-  right: 100%;
+  font-family: "PT Serif script=latin rev=1";
+  font-weight: 700;
 }
 
 @media screen and (max-width: 1110px) {
+  header .navegacion-personal {
+    height: auto;
+  }
   header .lugar, header .logo-efe {
     display: none;
+  }
+  header .menu-personal {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+
+@media screen and (max-width: 920px) {
+  header .menu-personal ul {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin-top: 10px;
+    margin-bottom: 0;
+  }
+  header .menu-personal ul .i-menu {
+    border: none;
+    padding: 20px;
+    margin: 0;
+    background: none;
+  }
+  header .productos {
+    background: none;
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  header .productos .a-menu {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  header .productos .desplegable .li-sub-menu {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
 }
 /*# sourceMappingURL=h.css.map */

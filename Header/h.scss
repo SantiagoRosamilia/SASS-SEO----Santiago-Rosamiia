@@ -1,12 +1,14 @@
 header{
-    background: #9D511D; 
+    background: #3a2114; 
+    
     .navegacion-personal{
         justify-content: center;
+        height: auto;
     }
     .logo-efe {
         margin-left: 20px;
         img{
-        width: 100px;
+        width: 90px;
         
         }
     }
@@ -15,10 +17,9 @@ header{
         justify-content: center;
     }    
     .menu-personal{
-        justify-content: center;
+        justify-content: start;
         .i-menu{
             margin: 20px;
-            padding: 5px;
             background: white;
             border: solid black 1px;
             .a-menu{
@@ -26,39 +27,104 @@ header{
                 color: brown;
                 font-weight: 800;
                 font-size: 20px;
-            }
-            .desplegable{
-                background: #03072E;
-                li{
-                    border-top: 2px solid grey ;
-                }
-                .sub-menu{
-                    font-family: sans-serif;
-                    color: white;
-                    font-weight: 800;
-                    font-size: 20px;
-                    text-decoration: none;
-                    padding-left: 3px;
-                }
+                height: auto;
             }
             
         }
     }
-    .lugar{
-        font-size: 30px;
-        border-left: 2px solid black;
-        background-color:#FEFEFE ;
-        padding-bottom: 25px;
-        padding-top: 25px;
-        padding-left: 160px;
-        h1{
-            position: relative;
-            right: 100%;
+    /* Menu desplegable */
+    .i-menu{
+        
+        margin: 20px;
+        background: white;
+        border: solid black 1px;
+        .a-menu{
+            font-family: sans-serif;
+            color: brown;
+            font-weight: 800;
+            font-size: 20px;
+            height: 20px;
+        }
+        .desplegable{
+            background: #03072E;
+            li{
+                border-top: 2px solid grey ;
+                list-style: none;
+                
+                a{
+                    color: white;
+                    text-decoration: none;
+
+                }
+                
+            }
+            .sub-menu{
+                font-family: sans-serif;
+                color: white;
+                font-weight: 800;
+                font-size: 20px;
+                text-decoration: none;
+                padding-left: 3px;
+            }
         }
     }
+    .lugar{
+        display: flex;
+        font-size: 30px;
+        border: 2px solid black;
+        background-color:#FEFEFE ;
+        height: 100px;
+        padding-left: 3%;
+        padding-right: 7%;
+        width: auto;
+        align-items: center;
+            h1{
+                font-family: "PT Serif script=latin rev=1";
+                font-weight: 700;
+                
+                
+            }
+    }
     @media screen and(max-width:1110px){
+        .navegacion-personal{
+            height: auto;
+        }
         .lugar, .logo-efe{
             display: none;
+        }
+        .menu-personal{
+            justify-content: center;
+        }
+    }
+    @media screen and(max-width:920px){
+        .menu-personal{
+            ul{
+                align-items: center;
+                margin-top: 10px;
+                margin-bottom: 0;
+                .i-menu{
+                    border: none;
+                    padding: 20px ;
+                    margin: 0;
+                    background: none;
+                    
+                }
+            }
+        }
+        .productos{
+            background: none;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            .a-menu{
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+            }
+            .desplegable .li-sub-menu{
+                display: flex;
+                justify-content: center;
+            }
         }
     }
 }
